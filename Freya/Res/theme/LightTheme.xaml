@@ -1,0 +1,74 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Freya.Res.theme">
+    <ResourceDictionary.MergedDictionaries>
+        <!-- primary color -->
+        <ResourceDictionary >
+            <!-- include your primary palette -->
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                    <!-- GroupBoxColor -->
+                    <Color x:Key="Primary50">#f3e5f5</Color>
+                    <Color x:Key="Primary50Foreground">#DD000000</Color>
+                    <Color x:Key="Primary100">#e1bee7</Color>
+                    <Color x:Key="Primary100Foreground">#DD000000</Color>
+                    <Color x:Key="Primary200">#263238</Color>
+                    <Color x:Key="Primary200Foreground">#0e1621</Color>
+                    <Color x:Key="Primary300">#DDFFFFFF</Color>
+                    <Color x:Key="Primary300Foreground">#0e1621</Color>
+                    <Color x:Key="Primary400">#121a26</Color>
+                    <Color x:Key="Primary400Foreground">#DDFFFFFF</Color>
+                    <Color x:Key="Primary500">#DDFFFFFF</Color>
+                    <Color x:Key="Primary500Foreground">#0e1621</Color>
+                    <Color x:Key="Primary600">#8e24aa</Color>
+                    <Color x:Key="Primary600Foreground">#0e1621</Color>
+                    <Color x:Key="Primary700">#FFFFFFFF</Color>
+                    <Color x:Key="Primary700Foreground">#121a26</Color>
+                    <Color x:Key="Primary800">#6a1b9a</Color>
+                    <Color x:Key="Primary800Foreground">#0e1621</Color>
+                    <Color x:Key="Primary900">#4a148c</Color>
+                    <Color x:Key="Primary900Foreground">#0e1621</Color>
+                    <Color x:Key="Accent100">#4290dd</Color>
+                    <Color x:Key="Accent100Foreground">#0e1621</Color>
+                    <Color x:Key="Accent200">#2e8276</Color>
+                    <Color x:Key="Accent200Foreground">#0e1621</Color>
+                    <Color x:Key="Accent400">#2e8276</Color>
+                    <Color x:Key="Accent400Foreground">#0e1621</Color>
+                    <Color x:Key="Accent700">#4290dd</Color>
+                    <Color x:Key="Accent700Foreground">#0e1621</Color>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+
+            <!--
+                            include three hues from the primary palette (and the associated forecolours).
+                            Do not rename, keep in sequence; light to dark.
+                        -->
+            <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="{StaticResource Primary200}"/>
+            <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="{StaticResource Primary200Foreground}"/>
+            <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="{StaticResource Primary200}"/>
+            <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="{StaticResource Primary700}"/>
+            <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="{StaticResource Primary700}"/>
+            <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="{StaticResource Primary700Foreground}"/>
+            <SolidColorBrush x:Key="TabColorBrush" Color="{StaticResource Primary200}"/>
+            <SolidColorBrush x:Key="TabColorForegroundBrush" Color="{StaticResource Primary700}"/>
+            <SolidColorBrush x:Key="StepBackColor" Color="{StaticResource Primary700}"/>
+        </ResourceDictionary>
+
+        <!-- secondary colour -->
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="SecondaryHueLightBrush" Color="{StaticResource Accent200}"/>
+            <SolidColorBrush x:Key="SecondaryHueLightForegroundBrush" Color="{StaticResource Accent200Foreground}"/>
+            <SolidColorBrush x:Key="SecondaryHueMidBrush" Color="{StaticResource Accent400}"/>
+            <SolidColorBrush x:Key="SecondaryHueMidForegroundBrush" Color="{StaticResource Accent400Foreground}"/>
+            <SolidColorBrush x:Key="SecondaryHueDarkBrush" Color="{StaticResource Accent200}"/>
+            <SolidColorBrush x:Key="SecondaryHueDarkForegroundBrush" Color="{StaticResource Accent700Foreground}"/>
+
+            <!-- include a single secondary accent color (and the associated forecolour) -->
+            <SolidColorBrush x:Key="SecondaryAccentBrush" Color="{StaticResource Accent200}"/>
+            <SolidColorBrush x:Key="SecondaryAccentForegroundBrush" Color="{StaticResource Accent200Foreground}"/>
+        </ResourceDictionary>
+        <!-- Include the Dragablz Material Design style -->
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

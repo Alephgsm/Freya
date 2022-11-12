@@ -1,0 +1,19 @@
+﻿<Application x:Class="Freya.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Freya"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary >
+                    <ResourceDictionary.MergedDictionaries>
+                        <ResourceDictionary Source="/Res/theme/LightTheme.xaml"/>
+                        <ResourceDictionary Source="/Res/Language/English.xaml"/>
+                    </ResourceDictionary.MergedDictionaries>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

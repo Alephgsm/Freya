@@ -1,0 +1,106 @@
+﻿<UserControl x:Class="Freya.Controls.Flash"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Freya.Controls"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             TextElement.Foreground="{DynamicResource  PrimaryHueDarkForegroundBrush}"
+             Background="{DynamicResource  PrimaryHueDarkBrush}"
+             d:DesignWidth="500">
+    <Grid >
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <StackPanel x:Name="Features" Orientation="Vertical">
+                <Grid x:Name="Pit">
+                    <Grid.ColumnDefinitions >
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox 
+                            Grid.Column="0"
+                            Text=""
+                            IsReadOnly="True"
+                            VerticalAlignment="Top"
+                            Margin="4"
+                            AcceptsReturn="False"
+                            Name="TxtBxPit"
+                            TextChanged="TxtBxPit_TextChanged"
+                            materialDesign:HintAssist.Hint="PIT File" />
+                    <Button x:Name="BtnClearPit"
+                                Click="BtnClearPit_Click"
+                                Margin="4" Grid.Column="1" >
+                        <materialDesign:PackIcon  Kind="CloseThick"/>
+                    </Button>
+                    <Button
+                            x:Name="BtnChoosePit"
+                            Click="BtnChoosePit_Click"
+                            Margin="4" Grid.Column="2" >
+                        <materialDesign:PackIcon  Kind="DotsHorizontal"/>
+                    </Button>
+                </Grid>
+            </StackPanel>
+            <WrapPanel Orientation="Horizontal"
+                            Grid.Row="1">
+
+
+                <CheckBox Style="{DynamicResource MaterialDesignCheckBox}"
+                              Content="auto reboot"
+                              Name="AutoBoot"
+                              Margin="5"
+                              Background="{DynamicResource  PrimaryHueDarkForegroundBrush}"
+                              IsChecked="True" />
+                <CheckBox Style="{StaticResource MaterialDesignCheckBox}"
+                              Name="RepartitionCheckBx"
+                              Content="Repartition"
+                              Margin="5"
+                              IsChecked="False"
+                              Background="{DynamicResource  PrimaryHueDarkForegroundBrush}"/>
+                <CheckBox Content="Update boot"
+                              x:Name="BootUpdate"
+                              Background="{DynamicResource  PrimaryHueDarkForegroundBrush}"
+                              Margin="5"
+                              Style="{StaticResource MaterialDesignCheckBox}"/>
+                <CheckBox Content="Clear EFS"
+                              x:Name="EfsClear"
+                              Background="{DynamicResource  PrimaryHueDarkForegroundBrush}"
+                              Margin="5"
+                              Style="{StaticResource MaterialDesignCheckBox}"/>
+
+            </WrapPanel>
+            <Grid
+                            Grid.Row="2">
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <Button Margin="5" materialDesign:ShadowAssist.ShadowDepth="Depth3" Grid.Column="0" Name="BtnFlash" Click="BtnFlash_Click">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" >
+                        <materialDesign:PackIcon Kind="CellphoneArrowDown" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock Name="LblFastFlash" Text="Flash" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+                <Button Margin="5"
+                            Grid.Column="1"
+                            Name="BtnReadPit"
+                            materialDesign:ShadowAssist.ShadowDepth="Depth3"
+                            Click="BtnReadPit_Click">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <materialDesign:PackIcon Kind="Harddisk" Margin="5" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock Name="LblReadPit" Text="Read PIT" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Grid>
+                </Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>
