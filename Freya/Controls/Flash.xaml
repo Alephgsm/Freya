@@ -51,7 +51,7 @@
 
 
                 <CheckBox Style="{DynamicResource MaterialDesignCheckBox}"
-                              Content="auto reboot"
+                              Content="Auto reboot"
                               Name="AutoBoot"
                               Margin="5"
                               Background="{DynamicResource  PrimaryHueDarkForegroundBrush}"
