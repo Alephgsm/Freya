@@ -161,7 +161,11 @@
                             </Button>
                         </Grid>
                         <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="5">
-                            
+                            <Label Foreground="{DynamicResource SecondaryHueDarkBrush}">
+                                <Hyperlink  Foreground="{DynamicResource SecondaryHueDarkBrush}" x:Name="LblGihub" Click="LblGihub_Click">
+                                    <Label x:Name="lblGithubH" Content="Github" Foreground="{DynamicResource SecondaryHueDarkBrush}"/>
+                                </Hyperlink>
+                            </Label>
                             <Label  Foreground="{DynamicResource SecondaryHueDarkBrush}">
                                 <Hyperlink  Foreground="{DynamicResource SecondaryHueDarkBrush}" x:Name="lblXDA" Click="lblXDA_Click">
                                     <Label x:Name="LblXda" Content="Xda-developers" Foreground="{DynamicResource SecondaryHueDarkBrush}"/>

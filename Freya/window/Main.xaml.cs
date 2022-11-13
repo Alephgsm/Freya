@@ -169,5 +169,10 @@ namespace Freya.window
             Flash_Log("Freya v" + System.Reflection.Assembly.GetEntryAssembly().GetName().Version.ToString(),  SharpOdinClient.util.utils.MsgType.Message);
             Flash_Log("════════════════════════════════════════════",  SharpOdinClient.util.utils.MsgType.Message);
         }
+
+        private void LblGihub_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("https://github.com/Alephgsm");
+        }
     }
 }
