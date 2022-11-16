@@ -1,5 +1,5 @@
 # Freya
-Freya is a beautifull .Net project for samsung flash Based on (https://github.com/Alephgsm/SharpOdinClient)
+Freya is Open Source .Net project for samsung flash tool Based on (https://github.com/Alephgsm/SharpOdinClient)
 
 Freya is like odin for flash, Read info,repartition (Automatically) but with faster and best features
 
