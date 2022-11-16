@@ -4,10 +4,15 @@ Freya is Open Source .Net project for samsung flash tool Based on (https://githu
 Freya is like odin for flash, Read info,repartition (Automatically) but with faster and best features
 
 # Feature
-+ Read Pit
-+ Repartition
-+ Select the desired files from inside the package that you want to Flash on device.
-
++ Read Pit(partition Tables to file)
++ Repartition (auto find from tar package)
++ Manually select item from tar file to flash
++ Flash (Hight speed)
++ boot update
++ efs clear
++ Display flash logs , progress
++ Material design from https://github.com/MaterialDesignInXAML
++ screenshot
 
 # Screenshot
 ![](https://github.com/Alephgsm/Freya/blob/master/Freya/Assets/1.PNG)
