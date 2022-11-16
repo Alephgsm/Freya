@@ -1,7 +1,9 @@
-﻿using Freya.Controls;
+﻿using Freya.Class;
+using Freya.Controls;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -173,6 +175,16 @@ namespace Freya.window
         private void LblGihub_Click(object sender, RoutedEventArgs e)
         {
             Process.Start("https://github.com/Alephgsm");
+        }
+
+        private void ScreenShot_Click(object sender, RoutedEventArgs e)
+        {
+            var image = ScreenCapture.CaptureActiveWindow();
+            var SavePath = $"{Util.Util.MyPath}\\backup\\Screenshot\\{DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss")}.Jpeg";
+            Util.Util.CreatFolder($"{Util.Util.MyPath}\\backup\\Screenshot");
+            image.Save(SavePath, ImageFormat.Jpeg);
+            Flash_Log("ScreenShot Saved : ", SharpOdinClient.util.utils.MsgType.Message);
+            Flash_Log(SavePath, SharpOdinClient.util.utils.MsgType.Result);
         }
     }
 }

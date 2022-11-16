@@ -148,8 +148,8 @@
                                 </materialDesign:Chip>
                             </materialDesign:ColorZone>
 
-
-                            <Button x:Name="BtnStop" IsEnabled="False" Grid.Column="4" Margin="5,10,10,4" Click="BtnStop_Click" Grid.ColumnSpan="2">
+                          
+                            <Button x:Name="BtnStop" IsEnabled="False" Grid.Column="5" Margin="5,10,10,4" Click="BtnStop_Click" Grid.ColumnSpan="1">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="auto"/>
@@ -158,6 +158,9 @@
                                     <materialDesign:PackIcon VerticalAlignment="Center" Kind="HandBackLeft" Grid.Column="0"/>
                                     <TextBlock Name="Stop" Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}" Text="{DynamicResource Stop}" Grid.Column="1"/>
                                 </Grid>
+                            </Button>
+                            <Button x:Name="ScreenShot" Grid.Column="4" Margin="5,6,5,0" Click="ScreenShot_Click">
+                                <materialDesign:PackIcon Kind="MonitorScreenshot"/>
                             </Button>
                         </Grid>
                         <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="5">
