@@ -44,7 +44,13 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="auto"/>
                             </Grid.ColumnDefinitions>
-                            <Image Source="/Assets/Freya.png" Grid.Column="0" Margin="4" Width="35" Height="35" RenderOptions.BitmapScalingMode="HighQuality" RenderOptions.EdgeMode="Aliased"/>
+                            <Grid Grid.Column="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Assets/Freya.png" Grid.Column="0" Margin="4" Width="35" Height="35" RenderOptions.BitmapScalingMode="HighQuality" RenderOptions.EdgeMode="Aliased"/>
+                            </Grid>
                             <materialDesign:Badged Grid.Column="1" Margin="100,0,0,0" x:Name="VersionBadge" Badge="v1.0.0.20" BadgeForeground="WhiteSmoke" HorizontalAlignment="Center" VerticalAlignment="Center" >
                                 <Grid>
                                     <Grid.ColumnDefinitions>
@@ -164,21 +170,25 @@
                             </Button>
                         </Grid>
                         <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="5">
-                            <Label Foreground="{DynamicResource SecondaryHueDarkBrush}">
-                                <Hyperlink  Foreground="{DynamicResource SecondaryHueDarkBrush}" x:Name="LblGihub" Click="LblGihub_Click">
-                                    <Label x:Name="lblGithubH" Content="Github" Foreground="{DynamicResource SecondaryHueDarkBrush}"/>
-                                </Hyperlink>
-                            </Label>
-                            <Label  Foreground="{DynamicResource SecondaryHueDarkBrush}">
-                                <Hyperlink  Foreground="{DynamicResource SecondaryHueDarkBrush}" x:Name="lblXDA" Click="lblXDA_Click">
-                                    <Label x:Name="LblXda" Content="Xda-developers" Foreground="{DynamicResource SecondaryHueDarkBrush}"/>
-                                </Hyperlink>
-                            </Label>
-                            <Label Foreground="{DynamicResource SecondaryHueDarkBrush}">
-                                <Hyperlink  Foreground="{DynamicResource SecondaryHueDarkBrush}" x:Name="lblAlephGsm" Click="lblAlephGsm_Click">
-                                    <Label x:Name="lblAlephGsmH" Content="AlephGsm" Foreground="{DynamicResource SecondaryHueDarkBrush}"/>
-                                </Hyperlink>
-                            </Label>
+                            <Button  x:Name="BtnGihub" Click="LblGihub_Click" Margin="5" Style="{StaticResource MaterialDesignPaperLightButton}">
+                                <StackPanel Orientation="Horizontal" >
+                                    <materialDesign:PackIcon Kind="Github"/>
+                                    <TextBlock Text="Github"/>
+                                </StackPanel>
+                            </Button>
+                            <Button  x:Name="BtnXDA" Click="lblXDA_Click" Margin="5" Style="{StaticResource MaterialDesignPaperLightButton}">
+                                <StackPanel Orientation="Horizontal" >
+                                    <materialDesign:PackIcon Kind="Forum"/>
+                                    <TextBlock Text="Xda-developers"/>
+                                </StackPanel>
+                            </Button>
+                            <Button  x:Name="BtnAlephGsm" Click="lblAlephGsm_Click" Margin="5" Style="{StaticResource MaterialDesignPaperLightButton}">
+                                <StackPanel Orientation="Horizontal" >
+                                    <materialDesign:PackIcon Kind="Hashtag"/>
+                                    <TextBlock Text="AlephGsm"/>
+                                </StackPanel>
+                            </Button>
+                          
                         </StackPanel>
                     </Grid>
                 </Grid>
