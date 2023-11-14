@@ -30,5 +30,3 @@ you can see your device information in flashing process also you can checked rep
 ![](https://github.com/Alephgsm/Freya/blob/master/Freya/Assets/3.gif)
 
 
-# Donate 
-theter TRC20 `TXZ1KviFtRzEiumVD8UCH1W7etJ2vM9VsQ`
